@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Markdown</title>
+</head>
+<body>
+    <a href="post/new/">Edit</a>
+    {% for p in post %}
+        <a href="post_detail/{{ p.pk }}/"><p>{{ p.title }}</p></a>
+    {% endfor %}
+</body>
+</html>

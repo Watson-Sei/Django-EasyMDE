@@ -1,0 +1,21 @@
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
+    <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<h2>New Post</h2>
+<form action="/post/new/" method="POST">{% csrf_token %}
+    {{ form.as_p }}
+    {{ form.media }}
+    <button type="submit">Save</button>
+    <script>
+        var easyMDE = new EasyMDE({element: document.getElementById('id_text')});
+    </script>
+    <script>
+        $(function () {
+            $('form').find('textarea').removeAttr('required');
+        })
+    </script>
+</form>
+</body>

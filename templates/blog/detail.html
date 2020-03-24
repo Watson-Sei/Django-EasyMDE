@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post_detail_page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/markdown-html.css' %}">
+</head>
+<body>
+    <h1>{{ post_detail.title }}</h1>
+    <p>{{ post_detail.user }}</p>
+    <p>{{ post_detail.get_text_as_markdown }}</p>
+</body>
+</html>
